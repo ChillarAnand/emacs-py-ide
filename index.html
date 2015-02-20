@@ -1,389 +1,397 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<title>slides</title>
-<meta name="author" content="(Anand Reddy Pandikunta)"/>
+  <head>
+    <meta charset="utf-8"/>
+    <title>slides</title>
+    <meta name="author" content="(Anand Reddy Pandikunta)"/>
 
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/2.5.0/css/reveal.min.css"/>
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/2.5.0/css/theme/simple.css" id="theme"/>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/2.5.0/css/reveal.min.css"/>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/2.5.0/css/theme/simple.css" id="theme"/>
 
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'http://cdn.jsdelivr.net/reveal.js/2.5.0/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
-</script>
-</head>
-<body>
-<div class="reveal">
-<div class="slides">
-<section>
-<h1>slides</h1>
-<h2>Anand Reddy Pandikunta</h2>
-<h2><a href="mailto:anand@anand-X550EA">anand@anand-X550EA</a></h2>
-<h2></h2></section>
-
-
-<section>
-<section id="sec-1" >
-
-<h2>Emacs As Python IDE</h2>
-</section>
-
-
-</section>
-<section>
-<section id="sec-2" >
-
-<h2>Why Use IDE?</h2>
-<p>
-laziness&#x2026;..
-</p>
-
-<img src="./images/laziness.jpg" alt="laziness.jpg" />
-
-<div class="org-src-container">
-
-<pre  class="src src-html">Image Credit: https://academichelp.net/
-</pre>
-</div>
-</section>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+     if( window.location.search.match( /print-pdf/gi ) ) {
+       var link = document.createElement( 'link' );
+       link.rel = 'stylesheet';
+       link.type = 'text/css';
+       link.href = 'http://cdn.jsdelivr.net/reveal.js/2.5.0/css/print/pdf.css';
+       document.getElementsByTagName( 'head' )[0].appendChild( link );
+     }
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class='footer'>
+        <span>Anand Reddy Pandikunta (@chillaranand)</span>
+        <a href="http://www.avilpage.com">http://avilpage.com</a>
+      </div>
+      <style>
+       .reveal .footer {
+         position: absolute;
+         bottom: 1em;
+         left: 1em;
+         font-size: 0.5em;
+       }
+      </style>
 
 
-</section>
-<section>
-<section id="sec-3" >
+      <div class="slides">
 
-<h2>Getting Started</h2>
-<p>
-Install Emacs
-</p>
+        <section>
+          <section id="sec-1" >
 
-<p>
-Emacs Tutorial
-</p>
-
-<p>
-Moving in a file.
-</p>
-
-<p>
-Moving between files.
-</p>
-</section>
+            <h2>Emacs As Python IDE</h2>
+          </section>
 
 
+        </section>
+        <section>
+          <section id="sec-2" >
 
-</section>
-<section>
-<section id="sec-4" >
+            <h2>Why Use IDE?</h2>
+            <p>
+              laziness&#x2026;..
+            </p>
 
-<h2>Package Management</h2>
-<p>
-Built in to emacs24
-</p>
+            <img src="./images/laziness.jpg" alt="laziness.jpg" />
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">package</span>)
+              <pre  class="src src-html">Image Credit: https://academichelp.net/
+              </pre>
+            </div>
+          </section>
+
+
+        </section>
+        <section>
+          <section id="sec-3" >
+
+            <h2>Getting Started</h2>
+            <p>
+              Install Emacs
+            </p>
+
+            <p>
+              Emacs Tutorial
+            </p>
+
+            <p>
+              Moving in a file.
+            </p>
+
+            <p>
+              Moving between files.
+            </p>
+          </section>
+
+
+
+        </section>
+        <section>
+          <section id="sec-4" >
+
+            <h2>Package Management</h2>
+            <p>
+              Built in to emacs24
+            </p>
+
+            <div class="org-src-container">
+
+              <pre  class="src src-emacs-lisp">(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">package</span>)
 (package-initialize)
 
 M-x package-list-packages
-</pre>
-</div>
+              </pre>
+            </div>
 
 
-<p>
-Getting more packages
-</p>
+            <p>
+              Getting more packages
+            </p>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">(setq package-archives
+              <pre  class="src src-emacs-lisp">(setq package-archives
   '((<span style="color: #8b2252;">"gnu"</span> . <span style="color: #8b2252;">"http://elpa.gnu.org/packages/"</span>)
     (<span style="color: #8b2252;">"marmalade"</span> . <span style="color: #8b2252;">"https://marmalade-repo.org/packages/"</span>)
     (<span style="color: #8b2252;">"melpa"</span> . <span style="color: #8b2252;">"http://melpa.milkbox.net/packages/"</span>)))
-</pre>
-</div>
-</section>
+              </pre>
+            </div>
+          </section>
 
 
 
-</section>
-<section>
-<section id="sec-5" >
+        </section>
+        <section>
+          <section id="sec-5" >
 
-<h2>Starter kits</h2>
-<p>
-A better way to get started.
-</p>
+            <h2>Starter kits</h2>
+            <p>
+              A better way to get started.
+            </p>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-sh">git clone https://github.com/bbatsov/prelude ~/.emacs.d/
+              <pre  class="src src-sh">git clone https://github.com/bbatsov/prelude ~/.emacs.d/
 
 git clone https://github.com/purcell/emacs.d ~/.emacs.d/
 
 git clone https://github.com/technomancy/emacs-starter-kit ~/.emacs.d/
-</pre>
-</div>
-</section>
+              </pre>
+            </div>
+          </section>
 
 
 
-</section>
-<section>
-<section id="sec-6" >
+        </section>
+        <section>
+          <section id="sec-6" >
 
-<h2>Syntax highlighting.</h2>
-<p>
-Provided by Emacs itself.
-</p>
+            <h2>Syntax highlighting.</h2>
+            <p>
+              Provided by Emacs itself.
+            </p>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">M-x python-mode  <span style="color: #b22222;">;;  </span><span style="color: #b22222;">Python-mode</span>
-</pre>
-</div>
-</section>
-
-
-
-</section>
-<section>
-<section id="sec-7" >
-
-<h2>Error Checking</h2>
-<p>
-Warning-as-you-type
-</p>
-
-<p>
-(i.e. some errors don't even require a compile cycle)
-</p>
+              <pre  class="src src-emacs-lisp">M-x python-mode  <span style="color: #b22222;">;;  </span><span style="color: #b22222;">Python-mode</span>
+              </pre>
+            </div>
+          </section>
 
 
-<p>
-Package: flycheck
-</p>
 
-<div class="org-src-container">
+        </section>
+        <section>
+          <section id="sec-7" >
 
-<pre  class="src src-emacs-lisp">M-x package-install RET flycheck
-</pre>
-</div>
+            <h2>Error Checking</h2>
+            <p>
+              Warning-as-you-type
+            </p>
 
-
-<div class="org-src-container">
-
-<pre  class="src src-emacs-lisp">(add-hook 'after-init-hook #'global-flycheck-mode)
-</pre>
-</div>
-</section>
+            <p>
+              (i.e. some errors don't even require a compile cycle)
+            </p>
 
 
-</section>
-<section>
-<section id="sec-8" >
+            <p>
+              Package: flycheck
+            </p>
 
-<h2>elpy</h2>
-<p>
-Best package for python development.
-</p>
+            <div class="org-src-container">
 
-<p>
-Batteries included.
-</p>
+              <pre  class="src src-emacs-lisp">M-x package-install RET flycheck
+              </pre>
+            </div>
 
-<div class="org-src-container">
 
-<pre  class="src src-sh">pip install rope
+            <div class="org-src-container">
+
+              <pre  class="src src-emacs-lisp">(add-hook 'after-init-hook #'global-flycheck-mode)
+              </pre>
+            </div>
+          </section>
+
+
+        </section>
+        <section>
+          <section id="sec-8" >
+
+            <h2>elpy</h2>
+            <p>
+              Best package for python development.
+            </p>
+
+            <p>
+              Batteries included.
+            </p>
+
+            <div class="org-src-container">
+
+              <pre  class="src src-sh">pip install rope
 pip install jedi
 pip install flake8
 pip install importmagic
-</pre>
-</div>
+              </pre>
+            </div>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">M-x package-install RET elpy
-</pre>
-</div>
+              <pre  class="src src-emacs-lisp">M-x package-install RET elpy
+              </pre>
+            </div>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">(package-initialize)
+              <pre  class="src src-emacs-lisp">(package-initialize)
 (elpy-enable)
-</pre>
-</div>
-</section>
+              </pre>
+            </div>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-9" >
+        </section>
+        <section>
+          <section id="sec-9" >
 
-<h2>Docs</h2>
-<p>
-Shows function signature
-</p>
+            <h2>Docs</h2>
+            <p>
+              Shows function signature
+            </p>
 
-<p>
-Get docs
-</p>
+            <p>
+              Get docs
+            </p>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">C-c C-d  <span style="color: #b22222;">;; </span><span style="color: #b22222;">elpy-doc</span>
-</pre>
-</div>
-</section>
+              <pre  class="src src-emacs-lisp">C-c C-d  <span style="color: #b22222;">;; </span><span style="color: #b22222;">elpy-doc</span>
+              </pre>
+            </div>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-10" >
+        </section>
+        <section>
+          <section id="sec-10" >
 
-<h2>Code Navigation.</h2>
-<p>
-Navigate code by treating them as hyperlinks.
-</p>
+            <h2>Code Navigation.</h2>
+            <p>
+              Navigate code by treating them as hyperlinks.
+            </p>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">M-.  <span style="color: #b22222;">;; </span><span style="color: #b22222;">elpy-goto-definition</span>
+              <pre  class="src src-emacs-lisp">M-.  <span style="color: #b22222;">;; </span><span style="color: #b22222;">elpy-goto-definition</span>
 M-*  <span style="color: #b22222;">;; </span><span style="color: #b22222;">pop-tag-mark</span>
-</pre>
-</div>
-</section>
+              </pre>
+            </div>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-11" >
+        </section>
+        <section>
+          <section id="sec-11" >
 
-<h2>Autocompletion</h2>
-<p>
-Autocompletion when you can't remember the all names.
-</p>
+            <h2>Autocompletion</h2>
+            <p>
+              Autocompletion when you can't remember the all names.
+            </p>
 
-<p>
-Jedi/Rope - Python specific
-</p>
+            <p>
+              Jedi/Rope - Python specific
+            </p>
 
-<p>
-Company/Auto-complete - General auto complete
-</p>
+            <p>
+              Company/Auto-complete - General auto complete
+            </p>
 
-<p>
-Elpy comes with company-mode
-</p>
-
-
-<div class="org-src-container">
-
-<pre  class="src src-emacs-lisp">M-&lt;n&gt;  <span style="color: #b22222;">;; </span><span style="color: #b22222;">select nth item</span>
-</pre>
-</div>
-</section>
+            <p>
+              Elpy comes with company-mode
+            </p>
 
 
-</section>
-<section>
-<section id="sec-12" >
+            <div class="org-src-container">
 
-<h2>Snippets</h2>
-<p>
-Package: yasnippet
-</p>
-
-<p>
-Elpy comes with yasnippet
-</p>
-</section>
+              <pre  class="src src-emacs-lisp">M-&lt;n&gt;  <span style="color: #b22222;">;; </span><span style="color: #b22222;">select nth item</span>
+              </pre>
+            </div>
+          </section>
 
 
+        </section>
+        <section>
+          <section id="sec-12" >
 
-</section>
-<section>
-<section id="sec-13" >
+            <h2>Snippets</h2>
+            <p>
+              Package: yasnippet
+            </p>
 
-<h2>Debugging</h2>
-<p>
-Debug using pdb.
-</p>
+            <p>
+              Elpy comes with yasnippet
+            </p>
+          </section>
 
-<div class="org-src-container">
 
-<pre  class="src src-python"><span style="color: #a020f0;">import</span> ipdb
+
+        </section>
+        <section>
+          <section id="sec-13" >
+
+            <h2>Debugging</h2>
+            <p>
+              Debug using pdb.
+            </p>
+
+            <div class="org-src-container">
+
+              <pre  class="src src-python"><span style="color: #a020f0;">import</span> ipdb
 ipdb.set_trace()
-</pre>
-</div>
-</section>
+              </pre>
+            </div>
+          </section>
 
 
 
-</section>
-<section>
-<section id="sec-14" >
+        </section>
+        <section>
+          <section id="sec-14" >
 
-<h2>Test Integration</h2>
-<p>
-Configure Your Test Runner.
-</p>
+            <h2>Test Integration</h2>
+            <p>
+              Configure Your Test Runner.
+            </p>
 
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">M-x elpy-set-test-runner
+              <pre  class="src src-emacs-lisp">M-x elpy-set-test-runner
 C-c C-t  <span style="color: #b22222;">;; </span><span style="color: #b22222;">runs test/ all tests</span>
-</pre>
-</div>
-</section>
+              </pre>
+            </div>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-15" >
+        </section>
+        <section>
+          <section id="sec-15" >
 
-<h2>Virtual Environment</h2>
-<p>
-Elpy comes with pyvenv
-</p>
+            <h2>Virtual Environment</h2>
+            <p>
+              Elpy comes with pyvenv
+            </p>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">M-x pyvenv-workon
+              <pre  class="src src-emacs-lisp">M-x pyvenv-workon
 
 M-x pyvenv-activate
 
 M-x pyvenv-deactivate
-</pre>
-</div>
-</section>
+              </pre>
+            </div>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-16" >
+        </section>
+        <section>
+          <section id="sec-16" >
 
-<h2>Web mode</h2>
-<div class="org-src-container">
+            <h2>Web mode</h2>
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">M-x package-install RET web-mode RET
-</pre>
-</div>
+              <pre  class="src src-emacs-lisp">M-x package-install RET web-mode RET
+              </pre>
+            </div>
 
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">web-mode</span>)
+              <pre  class="src src-emacs-lisp">(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">web-mode</span>)
 (add-to-list 'auto-mode-alist '(<span style="color: #8b2252;">"\\.html?\\'"</span> . web-mode))
 
 (setq web-mode-engines-alist '((<span style="color: #8b2252;">"django"</span> . <span style="color: #8b2252;">"\\.html\\'"</span>)))
@@ -395,260 +403,260 @@ M-x pyvenv-deactivate
 (setq web-mode-enable-auto-pairing t)
 (setq web-mode-enable-auto-expanding t)
 (setq web-mode-enable-css-colorization t)
-</pre>
-</div>
+              </pre>
+            </div>
 
-<p>
-Auto opening,  Auto completion, Auto expanders
-</p>
+            <p>
+              Auto opening,  Auto completion, Auto expanders
+            </p>
 
-<p>
-Code folding, Navigation
-</p>
+            <p>
+              Code folding, Navigation
+            </p>
 
-<p>
-Snippets - HTML/Django
-</p>
+            <p>
+              Snippets - HTML/Django
+            </p>
 
-<p>
-Context aware processing.
-</p>
-</section>
+            <p>
+              Context aware processing.
+            </p>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-17" >
+        </section>
+        <section>
+          <section id="sec-17" >
 
-<h2>Files/Projects</h2>
-<p>
-Explore system all files in system.
-Explore files related to particular project.
-</p>
+            <h2>Files/Projects</h2>
+            <p>
+              Explore system all files in system.
+              Explore files related to particular project.
+            </p>
 
-<p>
-Packages: projectile, dired-plus
-</p>
+            <p>
+              Packages: projectile, dired-plus
+            </p>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">C-c p p  <span style="color: #b22222;">;; </span><span style="color: #b22222;">switch projects</span>
+              <pre  class="src src-emacs-lisp">C-c p p  <span style="color: #b22222;">;; </span><span style="color: #b22222;">switch projects</span>
 C-c p f  <span style="color: #b22222;">;; </span><span style="color: #b22222;">list project files</span>
 C-c p g  <span style="color: #b22222;">;; </span><span style="color: #b22222;">grep project</span>
-</pre>
-</div>
-</section>
+              </pre>
+            </div>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-18" >
+        </section>
+        <section>
+          <section id="sec-18" >
 
-<h2>Source Control Integration</h2>
-<p>
-Packages: magit, git-gutter, git-blame
-</p>
+            <h2>Source Control Integration</h2>
+            <p>
+              Packages: magit, git-gutter, git-blame
+            </p>
 
-<div class="org-src-container">
+            <div class="org-src-container">
 
-<pre  class="src src-emacs-lisp">C-x g  <span style="color: #b22222;">;; </span><span style="color: #b22222;">starts magit buffer</span>
-</pre>
-</div>
-</section>
-
-
-
-</section>
-<section>
-<section id="sec-19" >
-
-<h2>Process</h2>
-<p>
-Python process
-</p>
-
-<p>
-Terminal
-</p>
-
-<p>
-Databases
-</p>
-</section>
+              <pre  class="src src-emacs-lisp">C-x g  <span style="color: #b22222;">;; </span><span style="color: #b22222;">starts magit buffer</span>
+              </pre>
+            </div>
+          </section>
 
 
 
-</section>
-<section>
-<section id="sec-20" >
+        </section>
+        <section>
+          <section id="sec-19" >
 
-<h2>Useful packages</h2>
-<p>
-helm
-</p>
+            <h2>Process</h2>
+            <p>
+              Python process
+            </p>
 
-<p>
-paredit
-</p>
+            <p>
+              Terminal
+            </p>
 
-<p>
-ace-jump-mode
-</p>
-
-<p>
-multiple-cursors
-</p>
-
-<p>
-expand-region
-</p>
-
-<p>
-use-package
-</p>
-</section>
+            <p>
+              Databases
+            </p>
+          </section>
 
 
 
-</section>
-<section>
-<section id="sec-21" >
+        </section>
+        <section>
+          <section id="sec-20" >
 
-<h2>Beyond IDE</h2>
-<p>
-IRC Client.
-</p>
+            <h2>Useful packages</h2>
+            <p>
+              helm
+            </p>
 
-<p>
-StackExchange Client.
-</p>
+            <p>
+              paredit
+            </p>
 
-<p>
-Read mail, tweets.
-</p>
+            <p>
+              ace-jump-mode
+            </p>
 
-<p>
-Documenting projects.
-</p>
+            <p>
+              multiple-cursors
+            </p>
 
-<p>
-Todo lists.
-</p>
+            <p>
+              expand-region
+            </p>
 
-<p>
-Listening music.
-</p>
-
-<p>
-Browse web.
-</p>
-
-<p>
-Interpret lisp.
-</p>
-
-<p>
-News reader.
-</p>
-
-<p>
-Terminal multiplexer.
-</p>
-
-<p>
-Play games.
-</p>
-
-<p>
-Video editor.
-</p>
-
-<p>
-Spreadsheet.
-</p>
-
-<p>
-Document viewer.
-</p>
-
-<p>
-Prepare presentations.
-</p>
-</section>
+            <p>
+              use-package
+            </p>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-22" >
 
-<h2>Resources</h2>
-<p>
-<a href="http://emacswiki.org/">http://emacswiki.org/</a>
-</p>
+        </section>
+        <section>
+          <section id="sec-21" >
 
-<p>
-<a href="http://melpa.org/">http://melpa.org/</a>
-</p>
+            <h2>Beyond IDE</h2>
+            <p>
+              IRC Client.
+            </p>
 
-<p>
-<a href="http://ergoemacs.org/">http://ergoemacs.org/</a>
-</p>
+            <p>
+              StackExchange Client.
+            </p>
 
-<p>
-<a href="http://masteringemacs.org">http://masteringemacs.org</a>
-</p>
+            <p>
+              Read mail, tweets.
+            </p>
 
-<p>
-<a href="http://emacsrocks.com/">http://emacsrocks.com/</a>
-</p>
+            <p>
+              Documenting projects.
+            </p>
 
-<p>
-<a href="https://github.com/jorgenschaefer/elpy">https://github.com/jorgenschaefer/elpy</a>
-</p>
-</section>
+            <p>
+              Todo lists.
+            </p>
+
+            <p>
+              Listening music.
+            </p>
+
+            <p>
+              Browse web.
+            </p>
+
+            <p>
+              Interpret lisp.
+            </p>
+
+            <p>
+              News reader.
+            </p>
+
+            <p>
+              Terminal multiplexer.
+            </p>
+
+            <p>
+              Play games.
+            </p>
+
+            <p>
+              Video editor.
+            </p>
+
+            <p>
+              Spreadsheet.
+            </p>
+
+            <p>
+              Document viewer.
+            </p>
+
+            <p>
+              Prepare presentations.
+            </p>
+          </section>
 
 
-</section>
-<section>
-<section id="sec-23" >
+        </section>
+        <section>
+          <section id="sec-22" >
 
-<h2>Questions?</h2>
-</section>
-</section>
-</div>
-</div>
+            <h2>Resources</h2>
+            <p>
+              <a href="http://emacswiki.org/">http://emacswiki.org/</a>
+            </p>
 
-<script src="http://cdn.jsdelivr.net/reveal.js/2.5.0/lib/js/head.min.js"></script>
-<script src="http://cdn.jsdelivr.net/reveal.js/2.5.0/js/reveal.min.js"></script>
+            <p>
+              <a href="http://melpa.org/">http://melpa.org/</a>
+            </p>
 
-<script>
-// Full list of configuration options available here:
-// https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
+            <p>
+              <a href="http://ergoemacs.org/">http://ergoemacs.org/</a>
+            </p>
 
-controls: true,
-progress: true,
-history: false,
-center: true,
-slideNumber: true,
-rollingLinks: false,
-keyboard: true,
-overview: true,
+            <p>
+              <a href="http://masteringemacs.org">http://masteringemacs.org</a>
+            </p>
 
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
-transitionSpeed: 'default',
+            <p>
+              <a href="http://emacsrocks.com/">http://emacsrocks.com/</a>
+            </p>
 
-// Optional libraries used to extend on reveal.js
-dependencies: [
- { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-]
-});
-</script>
-</body>
+            <p>
+              <a href="https://github.com/jorgenschaefer/elpy">https://github.com/jorgenschaefer/elpy</a>
+            </p>
+          </section>
+
+
+        </section>
+        <section>
+          <section id="sec-23" >
+
+            <h2>Questions?</h2>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="http://cdn.jsdelivr.net/reveal.js/2.5.0/lib/js/head.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/reveal.js/2.5.0/js/reveal.min.js"></script>
+
+    <script>
+     // Full list of configuration options available here:
+     // https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+
+       controls: true,
+       progress: true,
+       history: false,
+       center: true,
+       slideNumber: true,
+       rollingLinks: false,
+       keyboard: true,
+       overview: true,
+
+       theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+       transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+       transitionSpeed: 'default',
+
+       // Optional libraries used to extend on reveal.js
+       dependencies: [
+         { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+         { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+         { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+         { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+         { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+         { src: 'http://cdn.jsdelivr.net/reveal.js/2.5.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+       ]
+     });
+    </script>
+  </body>
 </html>
