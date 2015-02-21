@@ -149,7 +149,7 @@ git clone https://github.com/technomancy/emacs-starter-kit ~/.emacs.d/
         <section>
           <section id="sec-6" >
 
-            <h2>Syntax highlighting.</h2>
+            <h2>Python Mode</h2>
             <p>
               Provided by Emacs itself.
             </p>
@@ -165,41 +165,8 @@ git clone https://github.com/technomancy/emacs-starter-kit ~/.emacs.d/
 
         </section>
         <section>
+
           <section id="sec-7" >
-
-            <h2>Error Checking</h2>
-            <p>
-              Warning-as-you-type
-            </p>
-
-            <p>
-              (i.e. some errors don't even require a compile cycle)
-            </p>
-
-
-            <p>
-              Package: flycheck
-            </p>
-
-            <div class="org-src-container">
-
-              <pre  class="src src-emacs-lisp">M-x package-install RET flycheck
-              </pre>
-            </div>
-
-
-            <div class="org-src-container">
-
-              <pre  class="src src-emacs-lisp">(add-hook 'after-init-hook #'global-flycheck-mode)
-              </pre>
-            </div>
-          </section>
-
-
-        </section>
-        <section>
-          <section id="sec-8" >
-
             <h2>elpy</h2>
             <p>
               Best package for python development.
@@ -230,6 +197,41 @@ pip install importmagic
 (elpy-enable)
               </pre>
             </div>
+
+          </section>
+
+
+        </section>
+        <section>
+          <section id="sec-8" >
+
+            <h2>Error Checking</h2>
+            <p>
+              Warning-as-you-type
+            </p>
+
+            <p>
+              (i.e. some errors don't even require a compile cycle)
+            </p>
+
+
+            <p>
+              Package: flycheck
+            </p>
+
+            <div class="org-src-container">
+
+              <pre  class="src src-emacs-lisp">M-x package-install RET flycheck
+              </pre>
+            </div>
+
+
+            <div class="org-src-container">
+
+              <pre  class="src src-emacs-lisp">(add-hook 'after-init-hook #'global-flycheck-mode)
+              </pre>
+            </div>
+
           </section>
 
 
